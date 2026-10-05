@@ -1,0 +1,18 @@
+cssno			cssNum
+
+email			Email
+conf email		confEmail
+
+userID			usrID
+conf userID		confusrID
+
+lastname		lname
+firstname		fname
+mi				mname
+dateofbirth		dob
+
+address			add
+province		prvn
+city muni		ci-mu
+baranggay		brgy
+zip code		zipc
