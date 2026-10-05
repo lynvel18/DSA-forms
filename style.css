@@ -1,11 +1,66 @@
-.background {
-    background-color: #F9E6A8;
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  font-family: sans-serif;
 }
 
 
+#headerbox,
+#contentbox,
+#footerbox {
+  width: 100%;
+  max-width: 650px;
+}
 
-#header {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 50px;
-    font-weight: bolder;
+#headerbox h1 {
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+
+h4 {
+  margin: 8px 0 4px 0;
+  text-align: left;
+  width: 100%;
+}
+
+
+.content.single {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.content.double {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.form-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+}
+
+.content input,
+.content select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 10px;
+}
+
+#footerbox {
+  margin-top: 16px;
+  text-align: left; 
 }

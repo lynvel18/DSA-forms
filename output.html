@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Summary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="headerbox">
+        <h1>Registration Details</h1>
+        <hr>
+    </div>
+
+    <div id="contentbox">
+        <div class="content single">
+            <h4>CRN / SS Number:</h4>
+            <p id="out-crn"></p>
+        </div>
+
+        <div class="content single">
+            <h4>Full Name:</h4>
+            <p id="out-name"></p>
+        </div>
+
+        <div class="content single">
+            <h4>Email:</h4>
+            <p id="out-email"></p>
+        </div>
+
+        <div class="content single">
+            <h4>Username:</h4>
+            <p id="out-user"></p>
+        </div>
+
+        <div class="content single">
+            <h4>Date of Birth:</h4>
+            <p id="out-dob"></p>
+        </div>
+
+        <div class="content single">
+            <h4>Address:</h4>
+            <p id="out-address"></p>
+        </div>
+    </div>
+
+    <div id="footerbox">
+        <button onclick="window.location.href='index.html'">Register Another Member</button>
+    </div>
+
+    <!-- This script pulls the data from localStorage and writes it onto the page -->
+    <script>
+        const saved = localStorage.getItem("memberData");
+
+        if (saved) {
+            const data = JSON.parse(saved);
+
+            document.getElementById("out-crn").textContent = data.crn || "N/A";
+            document.getElementById("out-name").textContent = data.fullName.trim() || "N/A";
+            document.getElementById("out-email").textContent = data.email || "N/A";
+            document.getElementById("out-user").textContent = data.username || "N/A";
+            document.getElementById("out-dob").textContent = data.dob || "N/A";
+
+            const fullAddress = `${data.street}, ${data.barangay}, ${data.city}, ${data.province} ${data.zip}`;
+            document.getElementById("out-address").textContent = fullAddress;
+        }
+    </script>
+
+</body>
+</html>

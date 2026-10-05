@@ -3,148 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Online Member User Registration</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="background">
-    
-    <div id="main-front">
+<body>
 
-        <div id="header">
-            <div>
-                <div>Online Member Registraton Form</div>
-            </div>
-            <hr>
-        </div>
+    <!--Ang color di pagkilimti
+    - brown base
+    -
+    -
+    -->
 
+
+
+
+    <div id="headerbox">
         <div>
-            <div>
-                <h4>Required Field</h5>
-            </div>
-            
-                <p>Please supply the following information as reported to the Social Security System</p>
+            <h1>Online Member User Registration</h1>
+        </div>
+        <hr>
+    </div>
 
-            <div class="field1">
-                <div>
-                    <p>CRN/SS Number</p>
-                </div>
-                <div>
-                    <input type="text" class="text-box">
-                </div>
-            </div>
+    <div id="contentbox">
 
-            <p>If your email address is other than yahoo.com, kindly inform your network administrator not to block main from sss.gov.ph</p>
-            
-            <div class="field2">
-                <div class="field2-1">
-                    <div>
-                        <p>Email Adress</p>
-                    </div>
-                    <div>
-                        <input type="text" class="text-box">
-                    </div>
-                </div>
-
-                <div class="field2-2">
-                    <div>
-                        <p>Confirm Email Address</p>
-                    </div>
-                    <div>
-                        <input type="text" class="text-box">
-                    </div>
-                </div>
-
-            </div>
-
-                <p>Lenth must be 8-20 characters. First character must be alphabetic. No special characters except underscore.</p>
-            
-            <div class="field3">
-                <div class="field3-1">
-                    <div>
-                        <p>Preferred User ID</p>
-                    </div>
-                    <div>
-                        <input type="text" class="text-box">
-                    </div>
-                </div>
-
-                <div class="field3-2">
-                    <div>
-                        <p>Confirm User ID</p>
-                    </div>
-                    <div>
-                        <input type="text" class="text-box"> 
-                    </div>
-                </div>
-            </div>
-
-            <div class="field4">
-                <div class="field4-1">
-                    <p>Surname/Lastname</p>
-                </div>
-                <div>
-                    <input type="text" class="text-box">
-                </div>
-            </div>
-
-            <div class="field4-2">
-                <div>
-                    <p>Given Name</p>
-                </div>
-                <div>
-                    <input type="text" class="text-box">
-                </div>
-            </div>
-
-            <div class="field4-3">
-                <div>
-                    <p>Middle Name</p>
-                </div>
-                <div>
-                    <input type="text" class="text-box">
-                </div>
-            </div>
-
-            <div class="field4-4">
-                <div>
-                    <p>Date of Birth</p>
-                </div>
-                <div>
-                    s
-                </div>
-            </div>
-            
+        <div class="content single">
+            <h4>CRN / SS Number:</h4>
+            <input type="text" class="cssNum">
         </div>
 
+        <div class="content double">
+            <div class="form-content">
+                <h4>Email Address:</h4>
+                <input type="text" class="Email">
+            </div>
 
+            <div class="form-content">
+                <h4>Confirm Email Address:</h4>
+                <input type="text" class="confEmail">
+            </div>
+        </div>
 
-    
+        <div class="content double">
+            <div class="form-content">
+                <h4>Create Username</h4>
+                <input type="text" class="usrID">
+            </div>
 
+            <div class="form-content">
+                <h4>Confirm Username</h4>
+                <input type="text" class="confusrID">
+            </div>
+        </div>
 
+        <div class="content double">
+            <div class="form-content">
+                <h4>First Name:</h4>
+                <input type="text" class="fname">
+            </div>
 
+            <div class="form-content">
+                <h4>Last Name:</h4>
+                <input type="text" class="lname">
+            </div>
+        </div>
 
+        <div class="content double">
+            <div class="form-content">
+                <h4>M.I.</h4>
+                <input type="text" class="mname">
+            </div>
 
+            <div class="form-content">
+                <h4>Date of Birth</h4>
+                <input type="date" class="dob">
+            </div>
+        </div>
 
+        <div class="content single">
+            <h4>House no./Street/Subdivision or Purok</h4>
+            <input type="text" class="add">
+        </div>
 
+        <div class="content double">
+            <div class="form-content">
+                <h4>Province</h4>
+                <select id="province" class="custom-select">
+                    <option value="">-- Select Province --</option>
+                    <option value="SouthCotabato">South Cotabato</option>
+                    <option value="Cebu">Cebu</option>
+                    <option value="Laguna">Laguna</option>
+                </select>
+            </div>
 
+            <div class="form-content">
+                <h4>City/Municipality</h4>
+                <select id="city" class="custom-select" disabled>
+                    <option value="">-- Select Province First --</option>
+                </select>
+            </div>
+        </div>
 
+        <div class="content double">
+            <div class="form-content">
+                <h4>Barangay</h4>
+                <select id="barangay" class="custom-select" disabled>
+                    <option value="">-- Select City First --</option>
+                </select>
+            </div>
 
+            <div class="form-content">
+                <h4>Zip Code</h4>
+                <input type="text" class="zipc">
+            </div>
+        </div>
 
+    </div>
 
-
-
-
-
-
-
-
-
-
-
+    <div id="footerbox">
+        <button id="submitBtn">Submit Registration</button>
     </div>
 
 
 
+
+
+    <script src="script.js"></script>
 
 </body>
 </html>
